@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding: 0; 
+    margin: 0;
+}
+nz-layout{
+    height: 100vh;
+}
+
+nz-header{
+    background-color: rgb(0, 0, 0);
+    height: 10vh;
+}
+.row{
+    height: inherit;
+}
+.header-title{
+    padding-left: 3%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-title h3{
+    color: white;
+    display: flex;
+    height: inherit;
+    width: 100%;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: "Tinos", serif;
+    font-weight: 700;
+}
+nav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: inherit;
+    padding-right: 3%;
+}
+nav ul{
+    font-family: "Tinos", serif;
+    font-size: 100%;
+    list-style: none;
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+nav a{
+    color: white;
+    padding: 1em 2em;
+    font-size: 150%;
+    font-weight: 500;
+    height: inherit;
+}
+
+nav a:hover{
+    background-color: #E06800;
+}
+
+nav a.active-link{
+    border-bottom: 2px solid #E06800 ;
+}
+.sidebar-btn{
+    display: none;
+}
+.close-sidebar{
+    display: none;
+}
+@media screen and (max-width: 992px) {
+    nav{
+        background-color: black;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: min(16em, 100%);
+        z-index: 10;
+        border-left: 1px solid #E06800;
+        justify-content: center;
+        padding-right: 0;
+        transition: right 450ms ease-out;
+    }
+
+    .sidebar-btn{
+        display: flex; 
+        justify-content: right;
+        align-items: center;
+        color: white;
+        padding-right: 5%;
+    }
+    .sidebar-btn button{
+        background-color: transparent;
+        display: flex;
+        border: none;
+    }
+    .close-sidebar{
+        display: flex;
+        padding: 3vh 0 3vh;
+        background-color: transparent;
+        border: none;
+        color: white;
+    }
+    nav.show{
+        right: 0;
+    }
+    nav ul{
+        padding-top: 5%;
+        width: inherit;
+        flex-direction: column;
+
+    }
+    nav a.active-link{
+        border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 994px ) {
+
+    .header-title h3{
+        font-size: 1em;
+    }
+}
