@@ -21,10 +21,10 @@
                             <nz-icon nzType="close" nzTheme="outline" />
                         </button>
                     </li>
-                    <li><a class="active-link" href="">Inicio</a></li>
-                    <li><a href="">Comunidad</a></li>
-                    <li><a href="">Investigación</a></li>
-                    <li><a class="accent-link" href="">Sobre mí</a></li>
+                    <li><a (click)="goToHomePage(); $event.preventDefault()"  class="active-link" routerLink="">Inicio</a></li>
+                    <li><a routerLink="/Comunidad">Comunidad</a></li>
+                    <li><a routerLink="/investigacion">Investigación</a></li>
+                    <li><a (click)="goToProfile(); $event.preventDefault()" class="accent-link">Sobre mí</a></li>
                 </ul>
             </nav>
 

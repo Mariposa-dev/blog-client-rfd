@@ -6,6 +6,9 @@ import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { fromEvent, Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
@@ -14,13 +17,16 @@ import { tap } from 'rxjs/operators';
     NzLayoutModule,
     NzGridModule,
     NzDropDownModule,
-    NzIconModule
+    NzIconModule,
+    CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   @ViewChild('navbar') navbarRef!: ElementRef;
+
+  constructor(private router: Router){}
 
   openSidebar() {
     this.navbarRef.nativeElement.classList.add('show');
@@ -34,4 +40,13 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
+  goToProfile(){
+    this.router.navigate(['/viewProfile']);
+  }
+
+  goToHomePage(){
+    this.router.navigate(['/homePage'])
+  }
+
 }
