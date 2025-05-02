@@ -1,8 +1,41 @@
 <div>
-    <div class="botones-container">
-        <button class="boton">Investigador</button>
-        <button class="boton activo">Docencia</button>
-        <button class="boton">Trabajo</button>
-        <button class="boton">Hobbies</button>
-      </div>     
+  <div class="botones-container">
+    <button class="boton" (click)="abrirModal('Investigador')">Investigador</button>
+    <button class="boton" (click)="abrirModal('Docencia')">Docencia</button>
+    <button class="boton" (click)="abrirModal('Trabajo')">Trabajo</button>
+    <button class="boton" (click)="abrirModal('Hobbies')">Hobbies</button>
+  </div>
+  
+  <div *ngIf="modalActivo === 'Investigador'" class="modal">
+    <div class="modal-contenido">
+      <h2>Investigación</h2>
+      <p>Me apasiona dedicar tiempo a la investigación sobre el diseño mecánico de máquinas y mecanismos, las vibraciones mecánicas y entre otros temas.</p>
+      <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+  
+  <div *ngIf="modalActivo === 'Docencia'" class="modal">
+    <div class="modal-contenido">
+      <h2>Docencia</h2>
+      <p>Desarrollo de prototipos didácticos para mejorar aprendizaje a alumnos de licenciatura con mecanismos a través del uso de tecnologías CAD e impresión 3D. Esto mediante la integración de las materias de Dinámica de Máquinas, Diseño de Elementos de Máquinas, Vibraciones Mecánicas y Dibujo Asistido por Computadora.</p>
+      <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <div *ngIf="modalActivo === 'Trabajo'" class="modal">
+    <div class="modal-contenido">
+      <h2>Trabajo</h2>
+      <p>Desde el 2012 me encuentro laborando de tiempo completo en el Instituto Tecnológico de Sonora, desempeñándome en el puesto de profesor investigador, apoyando la carrera de Ingeniería Electromecánica.</p>
+      <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+  <div *ngIf="modalActivo === 'Hobbies'" class="modal">
+    <div class="modal-contenido">
+      <h2>Hobbies</h2>
+      <p>Uno de mis pasatiempos favoritos es la lectura de libros, también actualmente practico el arte suave.</p>
+      <button (click)="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
 </div>
