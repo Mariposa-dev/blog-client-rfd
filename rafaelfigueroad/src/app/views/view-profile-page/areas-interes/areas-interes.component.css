@@ -1,0 +1,33 @@
+.botones-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 60px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: auto;
+}
+  
+.boton {
+    padding: 20px 35px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f0eaea;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+.boton:hover {
+    background-color: #d8d8d8;
+}
+  
+.boton.activo {
+    background-color: #000;
+    color: #fff;
+}
+  

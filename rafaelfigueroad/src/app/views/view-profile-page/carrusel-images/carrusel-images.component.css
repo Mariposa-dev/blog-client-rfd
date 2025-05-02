@@ -1,0 +1,36 @@
+.carrusel {
+    position: relative;
+    width: 35%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+  
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+  
+.slides img {
+    width: 100%;
+    height: auto;
+}
+  
+.indicadores {
+    text-align: center;
+    margin-top: 10px;
+}
+  
+.indicadores span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.indicadores span.activo {
+    background-color: #000000;
+}

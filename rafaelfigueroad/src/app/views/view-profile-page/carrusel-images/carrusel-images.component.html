@@ -1,0 +1,15 @@
+<div class="carrusel">
+    <div class="slides" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+      <img *ngFor="let img of imagenes" [src]="img" alt="imagen carrusel" />
+    </div>
+  
+    <div class="indicadores">
+      <span 
+        *ngFor="let img of imagenes; let i = index"
+        [class.activo]="i === currentIndex"
+        (click)="irASlide(i)">
+      </span>
+    </div>
+  </div>
+  
+  

@@ -1,8 +1,14 @@
 import { Component } from '@angular/core';
+import { AreasInteresComponent } from './areas-interes/areas-interes.component';
+import { CarruselImagesComponent } from './carrusel-images/carrusel-images.component';
 
 @Component({
   selector: 'app-view-profile-page',
-  imports: [],
+  standalone: true,
+  imports: [
+    AreasInteresComponent,
+    CarruselImagesComponent
+  ],
   templateUrl: './view-profile-page.component.html',
   styleUrl: './view-profile-page.component.css'
 })
