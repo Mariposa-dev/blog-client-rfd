@@ -79,4 +79,19 @@
     line-height: 1.6; 
     margin-bottom: 20px; 
 }
+
+@media (max-width: 520px) {
+    .botones-container {
+      grid-template-columns: 1fr;
+      padding: 30px 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .boton {
+      width: 100%;
+      font-size: 18px;
+      padding: 15px;
+    }
+  }
   

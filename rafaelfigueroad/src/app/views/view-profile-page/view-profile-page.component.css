@@ -1,6 +1,7 @@
 .header {
     background-color: #111;
     height: 200px;
+    width: 100%;
     position: relative;
 }
 
@@ -95,4 +96,78 @@ h2{
 .info-Estudios i{
     margin-right: 12px;
 }
+
+
+@media (max-width: 650px) {
+    .profile-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .info h2 {
+        font-size: 24px;
+    }
+
+    .info-Estudios {
+        font-size: 18px;
+        padding: 0 15px;
+        text-align: center; 
+    }
+
+    .btnCorreo {
+        font-size: 20px;
+        width: 180px;
+    }
+
+    .barra-izquierda {
+        width: 30px;
+        height: 20px;
+    }
+
+    .contenedor-Interes h2 {
+        font-size: 24px;
+    }
+
+    .content {
+        padding: 80px 15px 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .profile-container {
+        width: 150px;
+        height: 150px;
+        border: 3px solid white;
+        bottom: -75px;
+    }
+
+    .info {
+        margin-top: 80px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .info-Estudios {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .btnCorreo {
+        font-size: 18px;
+        width: 160px;
+    }
+
+    .contenedor-Interes h2 {
+        font-size: 20px;
+    }
+
+    .barra-izquierda {
+        height: 18px;
+        width: 25px;
+    }
+}
+  
   
