@@ -1,0 +1,117 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  padding: 1rem;
+  font-family: 'Tinos', sans-serif;
+  background-color: white;
+}
+
+.filter-section {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-section button{
+  margin: 0.5rem;
+  width: 100px;
+  color: white;
+  background-color: black;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.paginacion button.activo {
+  background-color: orange;
+  color: white;
+}
+
+.info-paginacion {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+  font-size: 4rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  max-width: 40%;
+  text-align: justify;
+  margin-bottom: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 3rem;
+  }
+
+  .header p {
+    font-size: 1.2rem;
+    max-width: 80%;
+  }
+
+  .filter-section button {
+    width: 80px;
+  }
+
+  .paginacion button {
+    font-size: 0.8rem;
+  }
+
+  .info-paginacion {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .filter-section button {
+    width: 70px;
+  }
+
+  .paginacion button {
+    font-size: 0.7rem;
+  }
+
+  .info-paginacion {
+    font-size: 0.6rem;
+  }
+}

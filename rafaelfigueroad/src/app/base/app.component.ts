@@ -49,4 +49,8 @@ export class AppComponent implements OnInit {
     this.router.navigate(['/homePage'])
   }
 
+  goToPublication(){
+    this.router.navigate(['/publication'])
+  }
+
 }

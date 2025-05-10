@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  background: #ffffff;
+  text-align: justify;
+  font-size: 1rem;
+}
+.comentarios {
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .card{
+    width: 90%;
+    
+  }
+}
+
+@media (max-width: 450px) {
+  .card{
+    width: 90%;
+    
+  }
+}

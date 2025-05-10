@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="header">
+    <h1>Publicaciones</h1>
+    <p>
+      Encuentra aquí las diferentes publicaciones científicas de las que he sido colaborador y
+      obten información sobre el tema que sea de tu interés.
+    </p>
+  </div>
+  
+  <div class="filter-section">
+    <label>Filtrar por</label>
+    <button>Fecha</button>
+  </div>
+
+  <div class="publicaciones">
+    <app-publication-card
+      *ngFor="let pub of publicaciones"
+      [titulo]="pub.titulo"
+      [comentarios]="pub.comentarios">
+    </app-publication-card>
+  </div>
+
+  <div class="paginacion">
+    <button (click)="paginaAnterior()" [disabled]="paginaActual === 1">‹ Anterior</button>
+    <ng-container *ngFor="let p of totalPaginasArray">
+      <button [class.activo]="paginaActual === p" (click)="cambiarPagina(p)">{{ p }}</button>
+    </ng-container>
+    <button (click)="paginaSiguiente()" [disabled]="paginaActual === totalPaginas">Siguiente ›</button>
+  </div>
+
+  <div class="info-paginacion">
+    Mostrando {{ publicaciones.length }} de {{ totalResultados }} resultados
+  </div>
+</div>
